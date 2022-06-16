@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  database:
+    image: postgres:9.6
+    container_name: spring-demo-db
+    environment:
+      POSTGRES_DB: student
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1257
+    ports:
+      - 15432:5432
