@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "students")
+@Table(name = "player")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -35,11 +35,11 @@ public class Student {
     @Column(nullable = false)
     @NotEmpty(message = "Email may not be empty")
     private String email;
-    @NotNull(message = "Date of bi may not be null")
+    @NotNull(message = "Date  may not be null")
     @NonNull
     @Column(nullable = false)
     private LocalDate dateOfBirth;
     @ManyToOne(fetch = FetchType.EAGER)
-    @PrimaryKeyJoinColumn(name = "groups_id")
+    @PrimaryKeyJoinColumn(name = "player_id")
     private Group group;
 }
